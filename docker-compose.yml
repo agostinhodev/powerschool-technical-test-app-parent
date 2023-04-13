@@ -16,6 +16,21 @@ services:
     volumes:
       - ./backend/:/usr/src/app
 
+  powerschool-technical-test-frontend:
+    container_name: powerschool-technical-test-frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend/docker
+      target: development
+    command: sh -c "yarn install --no-cache --ignore-platform && yarn dev"
+    ports:
+      - 3001:3000
+    networks:
+      - powerschool-network
+    volumes:
+      - ./frontend/:/usr/src/app
+
 networks:
   powerschool-network:
     driver: bridge
