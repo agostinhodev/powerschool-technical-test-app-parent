@@ -6,16 +6,15 @@ services:
     restart: always
     build:
       dockerfile: Dockerfile
-      context: ./backend
+      context: ./backend/docker
       target: development
-    command: yarn start:dev
+    command: sh -c "yarn install --no-cache --ignore-platform && yarn start:dev"
     ports:
       - 3000:3000
     networks:
       - powerschool-network
     volumes:
       - ./backend/:/usr/src/app
-      - /usr/src/app/node_modules
 
 networks:
   powerschool-network:
