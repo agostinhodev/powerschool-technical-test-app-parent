@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  powerschool-technical-test-backend:
+    container_name: powerschool-technical-test-backend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+      target: development
+    volumes:
+      - ./backend/:/usr/src/app
+    command: yarn start:dev
+    ports:
+      - 3000:3000
+    networks:
+      - powerschool-network
+
+networks:
+  powerschool-network:
+    driver: bridge

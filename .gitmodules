@@ -1,0 +1,8 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:agostinhodev/powerschool-technical-test-app-backend.git
+	branch = master
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:agostinhodev/powerschool-technical-test-app-frontend.git
+	branch = master
