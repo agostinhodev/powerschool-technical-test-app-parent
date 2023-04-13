@@ -8,13 +8,14 @@ services:
       dockerfile: Dockerfile
       context: ./backend
       target: development
-    volumes:
-      - ./backend/:/usr/src/app
     command: yarn start:dev
     ports:
       - 3000:3000
     networks:
       - powerschool-network
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
 
 networks:
   powerschool-network:
