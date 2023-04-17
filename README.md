@@ -144,3 +144,10 @@ cd ./frontend
 ```bash
 yarn run cypress open
 ```
+
+### Test endpoint with curl
+
+```bash
+curl --request GET \
+  --url 'http://localhost:3000/autocomplete?name=Braz'
+```
