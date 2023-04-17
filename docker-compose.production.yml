@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  powerschool-technical-test-backend:
-    container_name: powerschool-technical-test-backend
+  powerschool-technical-test-backend-production:
+    container_name: powerschool-technical-test-backend-production
     restart: always
     build:
       dockerfile: Dockerfile
@@ -11,10 +11,10 @@ services:
     ports:
       - 3000:3000
     networks:
-      - powerschool-network
+      - powerschool-network-production
 
-  powerschool-technical-test-frontend:
-    container_name: powerschool-technical-test-frontend
+  powerschool-technical-test-frontend-production:
+    container_name: powerschool-technical-test-frontend-production
     restart: always
     build:
       dockerfile: Dockerfile
@@ -23,8 +23,8 @@ services:
     ports:
       - 3001:3000
     networks:
-      - powerschool-network
+      - powerschool-network-production
 
 networks:
-  powerschool-network:
+  powerschool-network-production:
     driver: bridge
