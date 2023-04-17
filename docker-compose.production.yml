@@ -5,8 +5,8 @@ services:
     container_name: powerschool-technical-test-backend-production
     restart: always
     build:
-      dockerfile: ./docker/production/Dockerfile
       context: ./backend/
+      dockerfile: ./docker/production/Dockerfile
       target: production
     ports:
       - 8080:3000
@@ -17,8 +17,8 @@ services:
     container_name: powerschool-technical-test-frontend-production
     restart: always
     build:
-      dockerfile: ./docker/production/Dockerfile
       context: ./frontend/
+      dockerfile: ./docker/production/Dockerfile
       target: production
     ports:
       - 80:3000

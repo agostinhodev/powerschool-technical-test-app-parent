@@ -5,8 +5,8 @@ services:
     container_name: powerschool-technical-test-backend-development
     restart: always
     build:
-      dockerfile: Dockerfile
       context: ./backend/docker/development
+      dockerfile: Dockerfile
       target: development
     command: sh -c "yarn install --no-cache --ignore-platform && yarn start:dev"
     ports:
@@ -20,8 +20,8 @@ services:
     container_name: powerschool-technical-test-frontend-development
     restart: always
     build:
-      dockerfile: Dockerfile
       context: ./frontend/docker/development
+      dockerfile: Dockerfile
       target: development
     command: sh -c "yarn install --no-cache --ignore-platform && yarn dev"
     ports:
