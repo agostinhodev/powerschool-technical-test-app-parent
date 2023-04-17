@@ -109,12 +109,25 @@ Please make sure you are running in the `--development` mode.
 
 ### Backend
 
-1. Run unit and integration tests: `docker exec -it powerschool-technical-test-backend-development yarn test`
-2. Run e2e tests: `docker exec -it powerschool-technical-test-backend-development yarn test:e2e`
+1. Run unit and integration tests:
+
+```bash
+docker exec -it powerschool-technical-test-backend-development yarn test
+```
+
+2. Run e2e tests:
+
+```bash
+docker exec -it powerschool-technical-test-backend-development yarn test:e2e`
+```
 
 ### Frontend
 
-1. Run unit and integration tests: `docker exec -it powerschool-technical-test-frontend-development yarn test`
+1. Run unit and integration tests:
+
+```bash
+docker exec -it powerschool-technical-test-frontend-development yarn test
+```
 
 ### Run e2e tests with cypress:
 
