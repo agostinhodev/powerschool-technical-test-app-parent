@@ -6,7 +6,7 @@ services:
     restart: always
     build:
       dockerfile: Dockerfile
-      context: ./backend/docker
+      context: ./backend/docker/development
       target: development
     command: sh -c "yarn install --no-cache --ignore-platform && yarn start:dev"
     ports:
@@ -21,7 +21,7 @@ services:
     restart: always
     build:
       dockerfile: Dockerfile
-      context: ./frontend/docker
+      context: ./frontend/docker/development
       target: development
     command: sh -c "yarn install --no-cache --ignore-platform && yarn dev"
     ports:
