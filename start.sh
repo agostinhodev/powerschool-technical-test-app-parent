@@ -16,10 +16,11 @@ do
 done
 
 git submodule update --init --recursive --remote
-git submodule foreach --recursive git checkout master
 
 if [ "$DEVELOPMENT" = true ] ; then
+    git submodule foreach --recursive git checkout develop
     docker-compose -f docker-compose.development.yml up -d --build
 else
+    git submodule foreach --recursive git checkout master
     docker-compose -f docker-compose.production.yml up -d --build
 fi
