@@ -102,12 +102,32 @@ In production mode, we will COPY all project inside a new Docker image. So, in t
 - Backend (API): http://localhost:8080/
 - Frontend (UI): http://localhost/
 
-# Tests
+## Running tests
 
-For this test, two different testing libraries were used:
+You can run tests in development mode. To do this, please follow the steps below:
+Please make sure you are running in the `--development` mode.
 
-Jest: for all unit and integration tests;
-Cypress: for all e2e tests in frontend
-Running tests
+### Backend
 
-You can run tests in development mode. To do this, please follow the steps below
+1. Run unit and integration tests: `docker exec -it powerschool-technical-test-backend-development yarn test`
+2. Run e2e tests: `docker exec -it powerschool-technical-test-backend-development yarn test:e2e`
+
+### Frontend
+
+1. Run unit and integration tests: `docker exec -it powerschool-technical-test-frontend-development yarn test`
+
+### Run e2e tests with cypress:
+
+Just in this case you must have yarn or npm installed in your host machine, because cypress needs to open a browser UI to run the tests. So, dot the following:
+
+1. Go to `frontend` folder
+
+```bash
+cd ./frontend
+```
+
+2. Run:
+
+```bash
+yarn run cypress open
+```
