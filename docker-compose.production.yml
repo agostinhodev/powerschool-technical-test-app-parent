@@ -9,7 +9,7 @@ services:
       context: ./backend/docker/production
       target: production
     ports:
-      - 3000:3000
+      - 8080:3000
     networks:
       - powerschool-network-production
 
@@ -21,7 +21,7 @@ services:
       context: ./frontend/docker/production
       target: production
     ports:
-      - 3001:3000
+      - 80:3000
     networks:
       - powerschool-network-production
 
