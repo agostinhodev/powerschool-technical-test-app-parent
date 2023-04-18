@@ -131,7 +131,7 @@ docker exec -it powerschool-technical-test-frontend-development yarn test
 
 ### Run e2e tests with cypress:
 
-Just in this case you must have yarn or npm installed in your host machine, because cypress needs to open a browser UI to run the tests. So, dot the following:
+Just in this case you must have yarn or npm installed in your host machine, because cypress needs to open a browser UI to run the tests. So, do the following:
 
 1. Go to `frontend` folder
 
