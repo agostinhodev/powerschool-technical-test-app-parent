@@ -118,7 +118,7 @@ docker exec -it powerschool-technical-test-backend-development yarn test
 2. Run e2e tests:
 
 ```bash
-docker exec -it powerschool-technical-test-backend-development yarn test:e2e`
+docker exec -it powerschool-technical-test-backend-development yarn test:e2e
 ```
 
 ### Frontend
